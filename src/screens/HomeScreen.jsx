@@ -1,5 +1,5 @@
 // The 3 main things a user can do. Each one has its own screen file.
-export const MENU = [
+const MENU = [
   { id: 'find', icon: '🏥', title: 'Find Care Near Me', subtitle: 'Clinics that fit your needs' },
   { id: 'bills', icon: '📄', title: 'Understand a Bill', subtitle: 'Snap a photo, get a plain explanation' },
   { id: 'profile', icon: '🙋', title: 'My Needs & Insurance', subtitle: 'Tell us what helps you' },
