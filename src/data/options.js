@@ -24,3 +24,13 @@ export const INSURANCE = [
   { id: 'kaiser', label: 'Kaiser Permanente' },
   { id: 'none', label: "I don't have insurance" },
 ]
+
+// Access Modes change how the WHOLE app looks and behaves.
+// "autoNeeds" are clinic needs we pre-select when a mode is turned on.
+export const MODES = [
+  { id: 'vision', icon: '👁️', label: 'Seeing', desc: 'Bigger text, stronger colors, read pages out loud', autoNeeds: ['largeprint'] },
+  { id: 'hearing', icon: '👂', label: 'Hearing', desc: 'No phone calls needed, ASL-friendly clinics first', autoNeeds: ['asl'] },
+  { id: 'movement', icon: '✋', label: 'Moving or using my hands', desc: 'Extra-large buttons, wheelchair access required', autoNeeds: ['wheelchair', 'parking'] },
+  { id: 'simple', icon: '🧠', label: 'Reading or remembering', desc: 'Simple words, fewer things on screen', autoNeeds: [] },
+  { id: 'sensory', icon: '🌿', label: 'Feeling overwhelmed (sensory)', desc: 'Calm colors, no motion, quiet clinics first', autoNeeds: ['quiet'] },
+]

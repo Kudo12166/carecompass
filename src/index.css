@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+/* ---------- Access Modes ----------
+   App.jsx puts data-* attributes on <html>. Tailwind colors and sizes are
+   CSS variables / rem units, so overriding them here restyles the whole app. */
+
+/* Seeing: bigger everything + much stronger contrast */
+html[data-vision] { font-size: 125%; }
+html[data-vision] {
+  --color-slate-100: #ffffff;
+  --color-slate-200: #d4d4d4;
+  --color-slate-300: #000000;
+  --color-slate-600: #000000;
+  --color-slate-700: #000000;
+  --color-blue-700: #001f7a;
+  --color-blue-900: #000033;
+  --color-green-700: #004d00;
+}
+
+/* Moving / hands: larger tap targets (padding is in rem, so it grows too) */
+html[data-movement] { font-size: 118%; }
+html[data-vision][data-movement] { font-size: 135%; }
+
+/* Sensory: soft, calm palette and no motion at all */
+html[data-sensory] {
+  --color-slate-100: #f3f0e8;
+  --color-blue-700: #4a7c74;
+  --color-blue-900: #2f4f4a;
+  --color-blue-50: #e8f0ee;
+  --color-green-700: #5b7a52;
+  --color-green-800: #4a6643;
+}
+html[data-sensory] *, html[data-sensory] *::before, html[data-sensory] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
