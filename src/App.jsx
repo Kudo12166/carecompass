@@ -58,7 +58,7 @@ export default function App() {
             />
           )}
           {screen === 'find' && <FindCareScreen profile={profile} onBack={goHome} />}
-          {screen === 'bills' && <BillsScreen onBack={goHome} />}
+          {screen === 'bills' && <BillsScreen profile={profile} onBack={goHome} />}
         </div>
       </main>
       <ReadAloudButton />
